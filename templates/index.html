@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowSkincare - Skincare Products Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">GlowSkincare</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About Us</a>
+        </nav>
+
+        <div class="cart-icon">
+            🛒 Shopping Cart (<span id="cart-count">0</span>)
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="hero">
+        <h1>Keep Your Skin Healthy, Smooth, and Glowing</h1>
+        <p>Choose the right products for your skin type</p>
+    </section>
+
+    <!-- Product Filter & List -->
+    <main class="container">
+        <h2>Popular Products</h2>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterProducts('all')">
+                All
+            </button>
+
+            <button class="filter-btn" onclick="filterProducts('serum')">
+                Serum
+            </button>
+
+            <button class="filter-btn" onclick="filterProducts('cleanser')">
+                Facial Cleanser
+            </button>
+
+            <button class="filter-btn" onclick="filterProducts('sunscreen')">
+                Sunscreen
+            </button>
+        </div>
+
+        <div class="product-grid" id="product-container">
+            <!-- Products will be displayed using JavaScript -->
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
